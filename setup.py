@@ -6,7 +6,7 @@ import glob
 
 setup(
     name='ws.mailcheck',
-    version='1.0.0.dev0',
+    version='1.0.0',
 
     install_requires=[
         'setuptools',
