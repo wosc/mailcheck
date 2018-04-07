@@ -103,7 +103,7 @@ def check_received(token):
     else:
         imap = imaplib.IMAP4(host, port)
         if use_ssl == 'starttls':
-            imap.starttls(context=SSL_CONTEXT)
+            imap.starttls(ssl_context=SSL_CONTEXT)
             log.debug('IMAP connect to %s:%s with STARTTLS', host, port)
         else:
             log.debug('IMAP connect to %s:%s', host, port)

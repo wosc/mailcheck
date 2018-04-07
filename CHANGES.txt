@@ -4,7 +4,8 @@ CHANGES
 1.1.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix typo because smtplib.starttls has `context` and imaplib.starttls has
+  `ssl_context` as the kw name, sigh.
 
 
 1.0.0 (2018-04-07)
