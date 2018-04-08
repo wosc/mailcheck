@@ -14,7 +14,7 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'mail-check-rountrip = ws.mailcheck.main:main',
+            'mail-check-roundtrip = ws.mailcheck.main:main',
         ],
     },
 
