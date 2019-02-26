@@ -35,7 +35,11 @@ def main():
                         level=CONFIG.get('loglevel', 'WARNING'))
 
     msg = create_message()
-    send(msg)
+    try:
+        send(msg)
+    except Exception:
+        log.warning('SMTP error, aborting', exc_info=True)
+        return 1
 
     waited = 0
     interval = int(CONFIG.get('poll_interval', 10))
@@ -43,8 +47,12 @@ def main():
     while waited < timeout:
         time.sleep(interval)
         waited += interval
-        if check_received(msg['X-Mailcheck-Token']):
-            return 0
+        try:
+            if check_received(msg['X-Mailcheck-Token']):
+                return 0
+        except Exception:
+            log.warning('IMAP error, aborting', exc_info=True)
+            return 1
         log.info('IMAP not found, retrying in %s', interval)
     log.info('IMAP not found after %s, giving up', timeout)
     return 2

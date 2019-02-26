@@ -4,7 +4,8 @@ CHANGES
 1.1.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Catch smtp/imap errors and exit, so we don't produce output on stdout (which
+  is annoying in cronjobs).
 
 
 1.0.2 (2018-04-08)
