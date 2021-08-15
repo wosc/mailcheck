@@ -38,7 +38,7 @@ def main():
     try:
         send(msg)
     except Exception:
-        log.warning('SMTP error, aborting', exc_info=True)
+        log.info('SMTP error, aborting', exc_info=True)
         return 1
 
     waited = 0
@@ -51,7 +51,7 @@ def main():
             if check_received(msg['X-Mailcheck-Token']):
                 return 0
         except Exception:
-            log.warning('IMAP error, aborting', exc_info=True)
+            log.info('IMAP error, aborting', exc_info=True)
             return 1
         log.info('IMAP not found, retrying in %s', interval)
     log.info('IMAP not found after %s, giving up', timeout)
