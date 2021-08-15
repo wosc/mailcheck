@@ -1,7 +1,7 @@
 CHANGES
 =======
 
-1.1.0 (unreleased)
+1.0.4 (2021-08-15)
 ------------------
 
 - Reduce loglevel for smtp/imap errors to prevent stdout output.
