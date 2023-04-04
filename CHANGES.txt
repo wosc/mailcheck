@@ -12,6 +12,15 @@ Changes
 - Switch from setup.py to pyproject.toml (wheel)
 
 
+1.0.5 (2023-04-04)
+------------------
+
+Changes
++++++++
+
+- Switch from setup.py to pyproject.toml (wheel)
+
+
 1.0.4 (2021-08-15)
 ------------------
 
