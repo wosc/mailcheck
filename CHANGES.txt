@@ -1,10 +1,15 @@
 CHANGES
 =======
 
-1.1.0 (unreleased)
+.. towncrier release notes start
+
+1.0.5 (2023-04-04)
 ------------------
 
-- Nothing changed yet.
+Changes
++++++++
+
+- Switch from setup.py to pyproject.toml (wheel)
 
 
 1.0.4 (2021-08-15)
